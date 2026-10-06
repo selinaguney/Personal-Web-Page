@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Technologies | Selina Güney</title>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- OpenLayers CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/ol@10.6.1/ol.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="technologies.html">Technologies</a>
+    </nav>
+
+
+    <main class="technologies">
+
+        <h1>Web Mapping Technologies</h1>
+
+        <p class="technologies-intro">
+            This page demonstrates some of the web mapping technologies
+            I am learning.
+        </p>
+
+
+        <!-- LEAFLET MAP -->
+        <section class="map-section">
+
+            <h2>Leaflet Map</h2>
+
+            <p>
+                An interactive map created using Leaflet.
+            </p>
+
+            <div id="leaflet-map"></div>
+
+        </section>
+
+
+        <!-- OPENLAYERS MAP -->
+        <section class="map-section">
+
+            <h2>OpenLayers Map</h2>
+
+            <p>
+                An interactive map created using OpenLayers.
+            </p>
+
+            <div id="openlayers-map"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- Leaflet Map -->
+    <script src="js/leaflet-map.js"></script>
+
+
+    <!-- OpenLayers JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@10.6.1/dist/ol.js"></script>
+
+    <!-- OpenLayers Map -->
+    <script src="js/openlayers-map.js"></script>
+
+</body>
+
+</html>

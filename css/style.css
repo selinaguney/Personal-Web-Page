@@ -1,142 +1,372 @@
+/* -------------------- */
+/* GENERAL */
+/* -------------------- */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: antiquewhite;
-    color: blue;
+    background-color: rgb(220, 207, 246);
+    color: #222;
 }
 
+
+/* -------------------- */
+/* NAVIGATION BAR */
+/* -------------------- */
+
 nav {
-    background-color: #1d3557;
+    background-color: #743eb6;
     padding: 20px;
     text-align: center;
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 20px;
     font-size: 18px;
+
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: palevioletred;
 }
 
-.hero {
+
+/* -------------------- */
+/* HOME PAGE */
+/* -------------------- */
+
+.home {
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
+
+    animation: fadeIn 1s ease-in-out;
 }
 
-.hero h1 {
+.home h1 {
     font-size: 60px;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
-.hero h2 {
+.home h2 {
     font-size: 28px;
     font-weight: normal;
+    margin-bottom: 30px;
 }
 
-.hero p {
+.intro {
     max-width: 650px;
-    margin: 30px auto;
+    margin: 0 auto 60px;
+
     line-height: 1.7;
     font-size: 18px;
 }
 
-.hero-buttons {
-    margin-top: 35px;
-}
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    margin: 5px;
-    background-color: #1d3557;
-    color: white;
-    text-decoration: none;
-    border: 2px solid #1d3557;
-    border-radius: 6px;
-    transition: 0.3s;
-}
+/* -------------------- */
+/* HOME INFORMATION */
+/* -------------------- */
 
-.btn:hover {
-    background-color: #457b9d;
-    border-color: #457b9d;
-}
+.home-info {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 
-.btn-outline {
-    background-color: transparent;
-    color: #1d3557;
-}
-
-.btn-outline:hover {
-    color: white;
-}
-
-.about {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: white;
-}
-
-.about > p {
-    max-width: 700px;
-    margin: 20px auto 50px;
-    line-height: 1.7;
-    color: #555;
-}
-
-.about h2 {
-    font-size: 36px;
-    color: #1d3557;
-}
-
-.info-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    align-items: stretch;
+
+    gap: 25px;
+    flex-wrap: nowrap;
 }
 
 .info-card {
-    width: 250px;
-    padding: 30px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
+    flex: 1;
+    padding: 30px 20px;
+    min-height: 180px;
+
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 15px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-card h3 {
-    color: #1d3557;
+    font-size: 22px;
+    margin-top: 0 0 20px 0;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateX(500px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(30);
-    }
+.info-card p {
+    margin: 8px 0;
+    font-size: 17px;
 }
 
-.hero {
-    animation: fadeIn 1s ease-in-out;
-}
+/* -------------------- */
+/* HOBBIES PAGE */
+/* -------------------- */
 
 .hobbies {
-    padding: 80px 20px;
+    padding: 70px 20px;
     text-align: center;
+
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hobbies h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-.hobbies > p {
+.hobbies-intro {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+/* -------------------- */
+/* HOBBY CARDS CONTAINER */
+/* -------------------- */
+
+.hobby-container {
+    width: 85%;
+    max-width: 1000px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/* -------------------- */
+/* INDIVIDUAL HOBBY CARD */
+/* -------------------- */
+
+.hobby-card {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+
+/* -------------------- */
+/* HOBBY IMAGES */
+/* -------------------- */
+
+.hobby-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s;
+}
+
+
+/* -------------------- */
+/* TRANSPARENT LAYER */
+/* -------------------- */
+
+.hobby-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* -------------------- */
+/* TEXT OVER IMAGE */
+/* -------------------- */
+
+.hobby-text {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+
+    text-align: center;
+    color: white;
+}
+
+.hobby-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hobby-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* -------------------- */
+/* IMAGE ZOOM EFFECT */
+/* -------------------- */
+
+.hobby-card:hover img {
+    transform: scale(1.1);
+}
+
+
+/* -------------------- */
+/* CSS ANIMATION */
+/* -------------------- */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* -------------------- */
+/* TECHNOLOGIES PAGE */
+/* -------------------- */
+
+.technologies {
+    padding: 70px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.technologies h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.technologies-intro {
     font-size: 18px;
     margin-bottom: 50px;
+}
+
+.map-section {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* -------------------- */
+/* MAPS */
+/* -------------------- */
+
+#leaflet-map,
+#openlayers-map {
+    width: 100%;
+    height: 500px;
+    margin: 25px auto 0;
+
+    border: 6px solid #743eb6;
+    border-radius: 15px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* -------------------- */
+/* MOBILE DESIGN */
+/* -------------------- */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 16px;
+    }
+
+
+    /* Home */
+
+    .home {
+        padding: 70px 20px;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .home-info {
+    width: 90%;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card {
+    width: auto;
+    min-height: auto;
+}
+
+
+    /* Hobbies */
+
+    .hobbies h1 {
+        font-size: 40px;
+    }
+
+    .hobby-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card {
+        height: 250px;
+    }
+
+}
+
+/* RED FLAG MAP MARKERS */
+
+.flag-marker {
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+.flag-marker:hover {
+    transform: scale(1.3);
 }
