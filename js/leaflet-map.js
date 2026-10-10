@@ -78,10 +78,6 @@ visitedCities.forEach(function(city) {
         }
     );
 
-    marker.bindPopup(
-        "<b>" + city.name + "</b><br>A city I have visited."
-    );
-
     marker.addTo(cityMarkers);
 
 });
@@ -175,10 +171,6 @@ fetch("data/turkiye_iller.geojson")
                 const provinceName = feature.properties.il_adi;
 
                 if (visitedProvinces.includes(provinceName)) {
-
-                    layer.bindPopup(
-                        "<b>" + provinceName + "</b><br>Visited ✓"
-                    );
 
                 }
             }

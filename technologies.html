@@ -7,21 +7,7 @@
 
     <title>Technologies | Selina Güney</title>
 
-    <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Leaflet CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
-
-    <!-- OpenLayers CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/ol@10.6.1/ol.css"
-    >
-
 </head>
 
 <body>
@@ -31,61 +17,58 @@
         <a href="index.html">Home</a>
         <a href="hobbies.html">Hobbies</a>
         <a href="technologies.html">Technologies</a>
+        <a href="maps.html">Maps</a>
     </nav>
-
 
     <main class="technologies">
 
-        <h1>Web Mapping Technologies</h1>
+        <h1>Technologies</h1>
 
         <p class="technologies-intro">
-            This page demonstrates some of the web mapping technologies
-            I am learning.
+            Some of the technologies and tools I use in my studies and projects.
         </p>
 
+        <section class="technology-table-section">
 
-        <!-- LEAFLET MAP -->
-        <section class="map-section">
+            <h2>Technologies I Use</h2>
 
-            <h2>Leaflet Map</h2>
+            <table class="technology-table">
+                <tr>
+                    <td>
+                        <img src="images/qgis.png" alt="QGIS">
+                        <h3>QGIS</h3>
+                        <p>GIS & Spatial Analysis</p>
+                    </td>
 
-            <p>
-                An interactive map created using Leaflet.
-            </p>
+                    <td>
+                        <img src="images/python.png" alt="Python">
+                        <h3>Python</h3>
+                        <p>Programming & Data Analysis</p>
+                    </td>
 
-            <div id="leaflet-map"></div>
+                    <td>
+                        <img src="images/gee.png" alt="Google Earth Engine">
+                        <h3>Google Earth Engine</h3>
+                        <p>Remote Sensing</p>
+                    </td>
 
-        </section>
+                    <td>
+                        <img src="images/leaflet.png" alt="Leaflet">
+                        <h3>Leaflet</h3>
+                        <p>Web Mapping</p>
+                    </td>
 
-
-        <!-- OPENLAYERS MAP -->
-        <section class="map-section">
-
-            <h2>OpenLayers Map</h2>
-
-            <p>
-                An interactive map created using OpenLayers.
-            </p>
-
-            <div id="openlayers-map"></div>
+                    <td>
+                        <img src="images/openlayers.png" alt="OpenLayers">
+                        <h3>OpenLayers</h3>
+                        <p>Web Mapping</p>
+                    </td>
+                </tr>
+            </table>
 
         </section>
 
     </main>
-
-
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Leaflet Map -->
-    <script src="js/leaflet-map.js"></script>
-
-
-    <!-- OpenLayers JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/ol@10.6.1/dist/ol.js"></script>
-
-    <!-- OpenLayers Map -->
-    <script src="js/openlayers-map.js"></script>
 
 </body>
 

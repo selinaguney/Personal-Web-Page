@@ -46,10 +46,11 @@ nav a:hover {
 }
 
 .home h1 {
-    font-size: 60px;
-    margin: 0 0 10px;
+    font-family: "Great Vibes", cursive;
+    font-size: 78px;
+    font-weight: 400;
+    margin: 0 0 5px;
 }
-
 .home h2 {
     font-size: 28px;
     font-weight: normal;
@@ -87,7 +88,7 @@ nav a:hover {
     padding: 30px 20px;
     min-height: 180px;
 
-    background-color: rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 15px;
 
     text-align: center;
@@ -113,7 +114,7 @@ nav a:hover {
 /* -------------------- */
 
 .hobbies {
-    padding: 70px 20px;
+    padding: 25px 20px;
     text-align: center;
 
     animation: fadeIn 1s ease-in-out;
@@ -136,13 +137,13 @@ nav a:hover {
 /* -------------------- */
 
 .hobby-container {
-    width: 85%;
-    max-width: 1000px;
-    margin: 40px auto;
+    width: 72%;
+    max-width: 850px;
+    margin: 25px auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
 }
 
 
@@ -151,12 +152,12 @@ nav a:hover {
 /* -------------------- */
 
 .hobby-card {
+    width: 100%;
+    height: 330px;
     position: relative;
-
-    height: 300px;
-
     overflow: hidden;
-    border-radius: 15px;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
 
@@ -167,10 +168,8 @@ nav a:hover {
 .hobby-card img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    transition: transform 0.5s;
+    display: block;
 }
 
 
@@ -369,4 +368,99 @@ nav a:hover {
 
 .flag-marker:hover {
     transform: scale(1.3);
+}
+
+/* =========================================
+   TECHNOLOGIES TABLE
+   ========================================= */
+
+.technology-table-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 70px;
+}
+
+.technology-table-section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.technology-table {
+    width: 100%;
+    border-spacing: 15px;
+    table-layout: fixed;
+}
+
+.technology-table td {
+    background-color: rgba(255, 255, 255, 0.30);
+    padding: 25px 15px;
+    border-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+
+    transition: transform 0.3s ease;
+}
+
+.technology-table td:hover {
+    transform: translateY(-5px);
+}
+
+.technology-table img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.technology-table h3 {
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.technology-table p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .technology-table,
+    .technology-table tbody,
+    .technology-table tr,
+    .technology-table td {
+        display: block;
+        width: auto;
+    }
+
+    .technology-table td {
+        margin-bottom: 15px;
+    }
+}
+
+/* OPENLAYERS POPUP */
+
+/* PROFILE PHOTO */
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #743eb6;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
+
+    margin-bottom: 25px;
+
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
 }
