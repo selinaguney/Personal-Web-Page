@@ -32,12 +32,13 @@
         <a href="hobbies.html">Hobbies</a>
         <a href="technologies.html">Technologies</a>
         <a href="maps.html">Maps</a>
+
+        <button id="theme-toggle" class="theme-toggle"
+        type="button" aria-label="Toggle dark mode">
+            <i data-lucide="moon"></i></button>
     </nav>
 
-        <button id="theme-toggle" class="theme-toggle" type="button">
-        🌙
-        </button>
-
+       
     <main class="technologies">
 
         <h1>Interactive Maps</h1>
@@ -98,6 +99,8 @@
     <!-- OpenLayers Map -->
     <script src="js/openlayers-map.js"></script>
 
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
     <script src="js/theme.js"></script>
 
 </body>
