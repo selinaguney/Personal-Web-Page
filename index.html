@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Selina Güney | Portfolio</title>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,29 +31,49 @@
         <a href="maps.html">Maps</a>
     </nav>
 
+    <!-- Dark / Light Mode Button -->
+    <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+    >
+        🌙
+    </button>
 
     <!-- Home Page -->
     <main class="home">
 
-        <img
-            src="images/kendim.jpg"
-            alt="Selina Güney"
-            class="profile-photo"
-        >
+        <!-- Profile Photo -->
+        <a href="about.html" class="profile-link" title="Learn more about me">
+            <img
+                src="images/kendim.jpg"
+                alt="Selina Güney"
+                class="profile-photo"
+            >
+            <span class="profile-hint">Click to know me ✨</span>
+        </a>
 
+        <!-- Name -->
         <h1>Selina Güney</h1>
 
-        <h2>Geomatics Engineering Student</h2>
+        <!-- Animated Text -->
+        <h2 class="typing-text">
+            Geomatics Engineering Student
+        </h2>
 
+        <!-- Introduction -->
         <p class="intro">
-            Hello! I am a Geomatics Engineering student at Hacettepe University.
-            I am interested in GIS, Remote Sensing, Spatial Analysis and Web GIS.
+            Hello! I am a Geomatics Engineering student
+            at Hacettepe University.
+            I am interested in GIS, Remote Sensing,
+            Spatial Analysis and Web GIS.
         </p>
-
 
         <!-- Personal Information -->
         <div class="home-info">
 
+            <!-- Education -->
             <div class="info-card">
                 <h3>Education</h3>
 
@@ -53,7 +81,7 @@
                 <p>Geomatics Engineering</p>
             </div>
 
-
+            <!-- Interests -->
             <div class="info-card">
                 <h3>Interests</h3>
 
@@ -62,7 +90,7 @@
                 <p>Spatial Analysis</p>
             </div>
 
-
+            <!-- Technologies -->
             <div class="info-card">
                 <h3>Technologies</h3>
 
@@ -73,7 +101,40 @@
 
         </div>
 
+        <!-- Contact Section -->
+        <section class="contact-section">
+
+            <h2>Contact Me</h2>
+
+            <div class="contact-links">
+
+                <!-- GitHub -->
+                <a
+                    href="https://github.com/selinaguney"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                    href="https://www.linkedin.com/in/selina-güney-3a966a320"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
+
+    <!-- JavaScript -->
+    <script src="js/theme.js"></script>
+    <script src="js/typing.js"></script>
 
 </body>
 

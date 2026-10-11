@@ -464,3 +464,373 @@ nav a:hover {
 .profile-photo:hover {
     transform: scale(1.05);
 }
+
+/* DARK / LIGHT MODE */
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 85px;
+    right: 25px;
+    z-index: 1000;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #19152b;
+    color: #f5efff;
+}
+
+body.dark-mode nav {
+    background-color: #100d20;
+}
+
+body.dark-mode .info-card,
+body.dark-mode .technology-table td {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #403451;
+}
+
+/* HOME PAGE - ANIMATED TEXT */
+
+.typing-text {
+    min-height: 40px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.typing-text.fade-out {
+    opacity: 0;
+}
+
+/* VISITED PROVINCES COUNTER */
+
+.visited-counter {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin: 15px auto;
+    font-weight: 500;
+}
+
+.visited-counter span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+/* VISIT BUTTON */
+
+.visit-button {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.visit-button:hover {
+    background-color: #b85b7d;
+}
+
+/* DARK MODE */
+
+body.dark-mode .visited-counter {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .visited-counter span {
+    color: #f5efff;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN IMPROVEMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 55px 15px 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    /* Home */
+    .home {
+        padding: 65px 15px;
+    }
+
+    .home h1 {
+        font-size: 48px;
+    }
+
+    .home h2 {
+        font-size: 20px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .home-info {
+        width: 100%;
+        max-width: 450px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info-card {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* Hobbies */
+    .hobby-container {
+        width: 100%;
+        max-width: 450px;
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card {
+        height: 280px;
+    }
+
+    /* Technologies */
+    .technologies {
+        padding: 55px 15px;
+    }
+
+    .technologies h1,
+    .hobbies h1 {
+        font-size: 36px;
+    }
+
+    /* Maps */
+    .map-section {
+        width: 95%;
+    }
+
+    #leaflet-map,
+    #openlayers-map {
+        height: 350px;
+        border-width: 3px;
+    }
+
+    /* Visited provinces counter */
+    .visited-counter {
+        box-sizing: border-box;
+        max-width: 100%;
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+
+    .visited-counter span {
+        font-size: 24px;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+        top: 75px;
+        right: 10px;
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .home h1 {
+        font-size: 42px;
+    }
+
+    .hobby-card {
+        height: 240px;
+    }
+
+    .profile-photo {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+
+
+/* ==========================================
+   CONTACT SECTION
+   ========================================== */
+
+.contact-section {
+    text-align: center;
+    padding: 15px 20px 0;
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin: 10px 0 15px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.contact-links a {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #743eb6;
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.contact-links a:hover {
+    transform: translateY(-4px);
+    background-color: palevioletred;
+    color: white;
+}
+
+body.dark-mode .contact-links a {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ==========================================
+   ABOUT ME PAGE
+   ========================================== */
+
+.about-page {
+    max-width: 650px;
+    margin: 45px auto;
+    padding: 40px 25px;
+    text-align: center;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+}
+
+.about-page h1 {
+    font-family: "Great Vibes", cursive;
+    font-size: 65px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.about-page h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.about-page .contact-section {
+    padding: 15px 0 25px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    color: palevioletred;
+}
+
+body.dark-mode .about-page {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================
+   CLICKABLE PROFILE PHOTO
+   ========================================== */
+
+.profile-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.profile-link .profile-photo {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-link:hover .profile-photo {
+    transform: scale(1.07);
+}
+
+.profile-hint {
+    font-size: 14px;
+    color: #743eb6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.profile-link:hover .profile-hint {
+    color: palevioletred;
+}
+
+body.dark-mode .profile-hint {
+    color: #d8baff;
+}
+
+/* ==========================================
+   MOBILE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    .about-page {
+        margin: 25px 15px;
+        padding: 30px 18px;
+    }
+
+    .about-page h1 {
+        font-size: 48px;
+    }
+}
