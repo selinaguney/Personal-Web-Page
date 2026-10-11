@@ -1013,3 +1013,258 @@ nav .theme-toggle:hover {
 body.dark-mode nav .theme-toggle {
     background: transparent;
 }
+
+
+/* DETAILED WALKING PIXEL CAT */
+
+.profile-cat-container {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.pixel-cat-walker {
+    position: absolute;
+    width: 110px;
+    height: 100px;
+    right: -70px;
+    bottom: -4px;
+    z-index: 5;
+    pointer-events: none;
+
+    animation: catWalkIn 3s linear both;
+}
+
+.pixel-cat {
+    position: relative;
+    width: 110px;
+    height: 100px;
+
+    animation:
+        catBodyBounce 0.35s steps(2) 7,
+        catSit 0.45s steps(3) 3s both;
+}
+
+/* BODY */
+.pixel-body {
+    position: absolute;
+    width: 65px;
+    height: 42px;
+    left: 10px;
+    top: 36px;
+
+    background: #f59a30;
+    border: 4px solid #9e4c1c;
+    box-sizing: border-box;
+
+    box-shadow:
+        inset 0 7px #ffc36a,
+        inset 0 -6px #dc7828;
+}
+
+/* STRIPES */
+.cat-stripe {
+    position: absolute;
+    width: 8px;
+    height: 13px;
+    background: #bd6325;
+    top: 0;
+}
+
+.stripe-one { left: 15px; }
+.stripe-two { left: 36px; }
+
+/* HEAD */
+.pixel-head {
+    position: absolute;
+    width: 47px;
+    height: 44px;
+    left: 65px;
+    top: 23px;
+
+    background: #ffae42;
+    border: 4px solid #9e4c1c;
+    box-sizing: border-box;
+    z-index: 5;
+
+    box-shadow: inset 0 6px #ffd080;
+}
+
+/* EARS */
+.pixel-ear {
+    position: absolute;
+    width: 14px;
+    height: 18px;
+    background: #ffae42;
+    border: 4px solid #9e4c1c;
+    box-sizing: border-box;
+    top: -18px;
+}
+
+.pixel-ear-left { left: 1px; }
+.pixel-ear-right { right: 1px; }
+
+/* EYES */
+.pixel-eye {
+    position: absolute;
+    width: 5px;
+    height: 7px;
+    background: #28211c;
+    top: 16px;
+}
+
+.pixel-eye-left { left: 9px; }
+.pixel-eye-right { right: 9px; }
+
+/* NOSE */
+.pixel-nose {
+    position: absolute;
+    width: 7px;
+    height: 5px;
+    background: #e77885;
+    top: 26px;
+    left: 16px;
+}
+
+/* CHEEKS */
+.pixel-cheek {
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: #ffd28b;
+    top: 27px;
+}
+
+.cheek-left { left: 3px; }
+.cheek-right { right: 3px; }
+
+/* FOUR LEGS */
+.pixel-leg {
+    position: absolute;
+    width: 14px;
+    height: 29px;
+    background: #f59a30;
+    border: 3px solid #9e4c1c;
+    box-sizing: border-box;
+    top: 65px;
+    transform-origin: top center;
+    z-index: 4;
+}
+
+.leg-back-left {
+    left: 15px;
+    animation: legStep 0.35s steps(2) 7;
+}
+
+.leg-back-right {
+    left: 31px;
+    animation: legStep 0.35s steps(2) 7 reverse;
+}
+
+.leg-front-left {
+    left: 66px;
+    animation: legStep 0.35s steps(2) 7 reverse;
+}
+
+.leg-front-right {
+    left: 82px;
+    animation: legStep 0.35s steps(2) 7;
+}
+
+/* TAIL */
+.pixel-tail {
+    position: absolute;
+    width: 13px;
+    height: 55px;
+    left: 2px;
+    top: 16px;
+
+    background: #f59a30;
+    border: 3px solid #9e4c1c;
+    box-sizing: border-box;
+
+    transform-origin: bottom center;
+    animation: tailWag 0.7s steps(3) infinite alternate;
+}
+
+/* WALKING */
+@keyframes catWalkIn {
+    0% {
+        transform: translateX(-180px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    85%, 100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ALTERNATING LEGS */
+@keyframes legStep {
+    0% {
+        transform: rotate(22deg);
+    }
+
+    100% {
+        transform: rotate(-22deg);
+    }
+}
+
+/* BODY MOVEMENT */
+@keyframes catBodyBounce {
+    0% {
+        translate: 0 0;
+    }
+
+    100% {
+        translate: 0 -4px;
+    }
+}
+
+/* SITTING */
+@keyframes catSit {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0.82);
+        transform-origin: bottom center;
+    }
+}
+
+/* TAIL MOVEMENT */
+@keyframes tailWag {
+    from {
+        transform: rotate(-15deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .pixel-cat-walker {
+        right: -25px;
+        scale: 0.7;
+        transform-origin: bottom right;
+    }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    .pixel-cat-walker,
+    .pixel-cat,
+    .pixel-leg,
+    .pixel-tail {
+        animation: none;
+    }
+}
