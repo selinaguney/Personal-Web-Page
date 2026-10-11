@@ -1,44 +1,44 @@
-# Personal Web Page
+# Personal Portfolio Website
 
-This project was created for the **GMT 458 – Web GIS** course.
+This website was developed as part of the GMT458 Web GIS course at Hacettepe University.
 
-The website is a personal portfolio that introduces me, my hobbies, the technologies I use, and interactive web maps.
+## About the Project
 
-## Pages
+This project is a personal portfolio website designed to introduce myself, share my interests, and demonstrate basic web development and Web GIS skills.
 
-- **Home** – Personal information and interests
-- **Hobbies** – Tennis, darts, my cats, and puzzles
-- **Technologies** – Technologies and tools I use
-- **Maps** – Interactive maps created with Leaflet and OpenLayers
+## Features
+
+- **Home:** Personal introduction, education, interests, and technologies.
+- **About Me:** Additional personal information and social media links.
+- **Hobbies:** A page showcasing my hobbies.
+- **Technologies:** Technologies and software tools I use.
+- **Maps:** Interactive maps created using Leaflet and OpenLayers.
+- **Dark/Light Mode:** Switchable color themes.
+- **Responsive Design:** Layout adapted for desktop and mobile devices.
 
 ## Technologies Used
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 - Leaflet
 - OpenLayers
-- OpenStreetMap
 - GeoJSON
 
 ## Interactive Maps
 
-### Leaflet
-The Leaflet map displays cities and provinces in Türkiye that I have visited, together with some cities I have visited in Europe.
+The Maps page includes two interactive maps:
 
-### OpenLayers
-The OpenLayers map displays some of the major lakes in Türkiye.
+**Leaflet Map:** Displays the provinces of Türkiye and allows users to mark visited provinces.
 
-## Data
+**OpenLayers Map:** Displays major lakes in Türkiye.
 
-Province boundary data is stored as GeoJSON and is used to visualize visited provinces on the Leaflet map.
+## Live Website
 
-## AI Usage
-
-ChatGPT was used during the development of this project for guidance, debugging, code explanations, and assistance with HTML, CSS, JavaScript, Leaflet, and OpenLayers.
+[View My Portfolio Website](https://selinaguney.github.io/Personal-Web-Page/)
 
 ## Author
 
 **Selina Güney**  
-Hacettepe University  
-Department of Geomatics Engineering
+Geomatics Engineering  
+Hacettepe University
